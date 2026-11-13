@@ -5,10 +5,6 @@ const loginPage = (req, res) => {
     return res.render('login');
 };
 
-const signupPage = (req, res) => {
-    return res.render('signup');
-}
-
 const logout = (req, res) => {
     req.session.destroy(); // Destroys the session on logout
     return res.redirect('/'); // Redirects to login page
@@ -76,7 +72,6 @@ const signup = async (req, res) => {
 
 module.exports = {
     loginPage,
-    signupPage,
     logout,
     login,
     signup,
